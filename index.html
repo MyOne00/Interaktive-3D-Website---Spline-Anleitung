@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLINE.STUDIO - Interaktive 3D Web-Entwicklung</title>
+    <!-- Stylesheet Verknüpfungen -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Hintergrund -->
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="background-effects">
+        <div class="gradient-orb"></div>
+        <div class="gradient-orb-2"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1000" class="logo">SPLINE.STUDIO</h1>
+
+            <nav id="mainNav">
+                <a data-aos="fade-down" data-aos-duration="1200" href="#showcase">GALERIE</a>
+                <a data-aos="fade-down" data-aos-duration="1400" href="#tutorials">ANLEITUNGEN</a>
+                <a data-aos="fade-down" data-aos-duration="1600" href="#examples">BEISPIELE</a>
+                <a data-aos="fade-down" data-aos-duration="1800" href="#documentation">HILFE</a>
+            </nav>
+
+            <button data-aos="fade-down" data-aos-duration="1000" class="btn-signin" onclick="scrollToSection('examples')">BEISPIELE</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </header>
+
+        <div class="mobile-nav" id="mobileNav">
+            <button class="close-btn" onclick="toggleMobileMenu()">×</button>
+            <a href="#showcase" onclick="scrollToSection('showcase')">GALERIE</a>
+            <a href="#tutorials" onclick="scrollToSection('tutorials')">ANLEITUNGEN</a>
+            <a href="#examples" onclick="scrollToSection('examples')">BEISPIELE</a>
+            <a href="#documentation" onclick="scrollToSection('documentation')">HILFE</a>
+            <a href="#examples" onclick="scrollToSection('examples')" style="background: linear-gradient(45deg, #6600c5, #7f42a7); padding: 1rem 2rem; border-radius: 50px;">BEISPIELE</a>
+        </div>
+
+        <main class="main-content">
+            <div class="content">
+                <div class="tag-box" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="tag">INTERAKTIV</div>
+                </div>
+
+                <h2 data-aos="fade-up" data-aos-duration="1200">
+                    Spline 3D-Entwicklung
+                </h2>
+
+                <p class="subtitle" data-aos="fade-up" data-aos-duration="1400">
+                    Erstelle beeindruckende 3D-Erlebnisse für das Web mit Spline. 
+                    Von grundlegenden Konzepten bis zur erweiterten Web-Integration.
+                </p>
+
+                <div class="buttons" data-aos="fade-up" data-aos-duration="1600">
+                    <a href="#tutorials" class="btn-getstarted" onclick="scrollToSection('tutorials')">Jetzt Lernen &gt;</a>
+                    <a href="#examples" class="btn-signin-main" onclick="scrollToSection('examples')">Code Ansehen &gt;</a>
+                </div>
+
+                <div class="stats" data-aos="fade-up" data-aos-duration="1800">
+                    <div class="stat">
+                        <span class="stat-number" data-count="250">0</span>
+                        <span class="stat-label">Spline-Projekte</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="35">0</span>
+                        <span class="stat-label">Tutorials</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="850">0</span>
+                        <span class="stat-label">Entwickler</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="robot-container" data-aos="fade-left" data-aos-duration="1500">
+                <spline-viewer class="robot-3d"
+                    url="https://prod.spline.design/NYrrXx4jI-uhqIDe/scene.splinecode">
+                </spline-viewer>
+                <div class="model-controls">
+                    <button class="control-btn" onclick="rotateModel('left')" title="Links drehen">↶</button>
+                    <button class="control-btn" onclick="rotateModel('right')" title="Rechts drehen">↷</button>
+                    <button class="control-btn" onclick="resetModel()" title="Ansicht zurücksetzen">⌂</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Spline Galerie Section -->
+        <section id="showcase" class="showcase-section">
+            <h3 data-aos="fade-up">Spline Galerie</h3>
+            <div class="showcase-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="showcase-item">
+                    <div class="showcase-preview">
+                        <div class="preview-3d spline-basic-preview"></div>
+                    </div>
+                    <h4>Spline Grundlagen</h4>
+                    <p>Lerne die Basics von Spline mit einfachen 3D-Szenen und Objekten</p>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-preview">
+                        <div class="preview-3d spline-animation-preview"></div>
+                    </div>
+                    <h4>Spline Animationen</h4>
+                    <p>Erstelle beeindruckende Animationen und Interaktionen in Spline</p>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-preview">
+                        <div class="preview-3d spline-integration-preview"></div>
+                    </div>
+                    <h4>Web-Integration</h4>
+                    <p>Spline-Projekte nahtlos in Websites und Apps einbetten</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anleitungen Section -->
+        <section id="tutorials" class="tutorials-section">
+            <h3 data-aos="fade-up">Spline Anleitungen</h3>
+            <div class="tutorial-list" data-aos="fade-up" data-aos-delay="200">
+                <div class="tutorial-item">
+                    <div class="tutorial-icon">🎯</div>
+                    <div class="tutorial-content">
+                        <h4>Erste Schritte mit Spline</h4>
+                        <p>Spline-Editor kennenlernen, erste 3D-Objekte erstellen und Szenen aufbauen</p>
+                        <span class="tutorial-duration">25 min</span>
+                    </div>
+                </div>
+                <div class="tutorial-item">
+                    <div class="tutorial-icon">🎨</div>
+                    <div class="tutorial-content">
+                        <h4>Materialien & Beleuchtung</h4>
+                        <p>Realistische Materialien erstellen und Lichteffekte in Spline meistern</p>
+                        <span class="tutorial-duration">40 min</span>
+                    </div>
+                </div>
+                <div class="tutorial-item">
+                    <div class="tutorial-icon">🎬</div>
+                    <div class="tutorial-content">
+                        <h4>Interaktivität hinzufügen</h4>
+                        <p>Events, Hover-Effekte und Animationen für interaktive Spline-Szenen</p>
+                        <span class="tutorial-duration">50 min</span>
+                    </div>
+                </div>
+                <div class="tutorial-item">
+                    <div class="tutorial-icon">🚀</div>
+                    <div class="tutorial-content">
+                        <h4>Export & Einbettung</h4>
+                        <p>Spline-Projekte exportieren und in HTML/React-Projekte integrieren</p>
+                        <span class="tutorial-duration">30 min</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beispiele Section -->
+        <section id="examples" class="examples-section">
+            <h3 data-aos="fade-up">Spline Code-Beispiele</h3>
+            <div class="examples-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="example-card" onclick="showCode('einbettung')">
+                    <div class="example-preview spline-embed-example"></div>
+                    <h4>Spline Einbetten</h4>
+                    <button class="view-code-btn">Code Anzeigen</button>
+                </div>
+                <div class="example-card" onclick="showCode('events')">
+                    <div class="example-preview spline-events-example"></div>
+                    <h4>Spline Events</h4>
+                    <button class="view-code-btn">Code Anzeigen</button>
+                </div>
+                <div class="example-card" onclick="showCode('responsive')">
+                    <div class="example-preview spline-responsive-example"></div>
+                    <h4>Responsive Spline</h4>
+                    <button class="view-code-btn">Code Anzeigen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dokumentation Section -->
+        <section id="documentation" class="documentation-section">
+            <h3 data-aos="fade-up">Spline Dokumentation</h3>
+            <div class="docs-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="doc-category" onclick="toggleDocCategory(this)">
+                    <h4>Spline Grundlagen <span class="toggle-icon">+</span></h4>
+                    <div class="doc-content">
+                        <p>Alles was du über Spline wissen musst - von den Basics bis zur Profianwendung.</p>
+                        <ul>
+                            <li>Spline-Editor Überblick</li>
+                            <li>3D-Objekte erstellen</li>
+                            <li>Kamera-Steuerung</li>
+                            <li>Szenen-Organisation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doc-category" onclick="toggleDocCategory(this)">
+                    <h4>Web-Integration <span class="toggle-icon">+</span></h4>
+                    <div class="doc-content">
+                        <p>So integrierst du Spline-Projekte erfolgreich in deine Websites.</p>
+                        <ul>
+                            <li>spline-viewer verwenden</li>
+                            <li>React-Integration</li>
+                            <li>Performance-Optimierung</li>
+                            <li>Mobile Kompatibilität</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doc-category" onclick="toggleDocCategory(this)">
+                    <h4>Tipps & Tricks <span class="toggle-icon">+</span></h4>
+                    <div class="doc-content">
+                        <p>Profi-Tipps für bessere Spline-Projekte und optimale Performance.</p>
+                        <ul>
+                            <li>Optimierte Geometrie</li>
+                            <li>Textur-Komprimierung</li>
+                            <li>Ladezeit-Optimierung</li>
+                            <li>Fehlerbehandlung</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Code Modal -->
+    <div id="codeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('codeModal')">&times;</span>
+            <h2 id="codeTitle">Code Beispiel</h2>
+            <pre id="codeContent"><code>// Code wird hier angezeigt</code></pre>
+            <button class="copy-code-btn" onclick="copyCode()">Code Kopieren</button>
+        </div>
+    </div>
+
+    <!-- Interaktiver 3D-Roboter -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.68/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Script.js verknüpft -->
+    <script src="script.js"></script>
+</body>
+</html>
